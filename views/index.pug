@@ -1,15 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h1= title
+    p Welcome to #{title}
 
-  ul
-    each val in messages
-      .message  
-        h2.user #{val.user} 
-        div.value #{val.text}
-        br
-        div.date #{val.added}
-  form(method="get" action="/new")
-    button Add New Message 
+    .messages-container
+      each val in messages
+          .message  
+            .message-heading
+              h2.user #{val.user} 
+                span @#{val.user}
+              div.date #{val.added.toLocaleTimeString()} #{val.added.toLocaleDateString()}
+            div.value #{val.text}
+            
+          
+    form(method="get" action="/new")
+      button.add-button Tweet
