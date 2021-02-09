@@ -28,7 +28,7 @@ router.post("/new", function (req, res, next) {
     user: req.body.user,
     added: new Date(),
   });
-  res.redirect("/");
+  res.redirect("/"); //return
 });
 
 module.exports = router;
