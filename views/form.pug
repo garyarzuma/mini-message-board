@@ -1,19 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Add New Message
-    form( method='post' action='/new')
-        label(name="user") Username:
-            input(
-            type='text'
-            name='user'
-            )
-        label(name="message") Message:
-            input(
-            type='text'
-            name='message'
-            )
-        button(type="submit") Submit
-    form(method="get" action="/")
-        button Go Back
+    .add-message-container
+            h1 Add New Message
+            .container-add
+                form( method='post' action='/new')
+                    .form-container
+                        label(name="user") Username:
+                            input(
+                            type='text'
+                            name='user'
+                            )
+                        label(name="message") Message:
+                            textarea(
+                            
+                            name='message'
+                            cols= "100" rows="5"
+                            )
+                    button(type="submit") Submit
+                form(method="get" action="/")
+                    button Go Back
