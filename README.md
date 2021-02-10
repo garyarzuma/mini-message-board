@@ -23,4 +23,4 @@ Date Completed: 2/09/2021
 
 -Gary Arzumanyan
 
-![Sample Gif](src/images/tweeter-sample.gif)
+![Sample Gif](images/tweeter-sample.gif)
