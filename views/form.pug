@@ -6,17 +6,16 @@ block content
             .container-add
                 form( method='post' action='/new')
                     .form-container
-                        label(name="user") Username:
-                            input(
+                        input(
                             type='text'
                             name='user'
-                            )
-                        label(name="message") Message:
-                            textarea(
-                            
+                            placeholder="Username"
+                        )
+                        textarea(
+                            placeholder="Enter a message"
                             name='message'
-                            cols= "100" rows="5"
-                            )
+                           rows="5"
+                        )
                     button(type="submit") Submit
                 form(method="get" action="/")
                     button Go Back
